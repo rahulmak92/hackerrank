@@ -1,0 +1,42 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main() 
+{
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    
+    int dimension;
+    int sum1=0,sum2=0;
+    cin>>dimension;
+    int arr[1000][1000];
+    for(int i=0;i<dimension;i++)
+    {
+        for(int j=0;j<dimension;j++)
+        {
+            cin>>arr[i][j];
+        }
+    }    
+    for(int i=0;i<dimension;i++)
+    {
+        for(int j=0;j<dimension;j++)
+        {
+            if(i==j)
+            {
+               // cout<<"For "<<arr[i][j]<<" "<<endl;
+                sum1=sum1+arr[i][j];
+            }   
+        }   
+    }  
+    for(int i=0;i<dimension;i++)
+    {
+       // cout<<"For "<<arr[i][(dimension-1)-i]<<" "<<endl;
+        sum2=sum2+arr[i][(dimension-1)-i];
+    }    
+//    cout<<sum1<<endl;
+//    cout<<sum2<<endl;
+    cout<<abs(sum2-sum1)<<endl;
+    return 0;
+}
