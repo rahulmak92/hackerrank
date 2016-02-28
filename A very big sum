@@ -1,0 +1,21 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int size;
+    long long int arr[1000];
+    cin>>size;
+    long long int sum=0;
+    for(int i=0;i < size ; i++)
+    {
+        cin>>arr[i];
+        sum=sum+arr[i];
+    }    
+    cout<<sum;
+    return 0;
+}
